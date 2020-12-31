@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.humanize',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -35,8 +36,10 @@ INSTALLED_APPS = [
     'bootstrap4',
     'debug_toolbar',
     'django_pydenticon',
+    'easy_thumbnails',
     #local
     'accounts',
+    'instagram',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +53,7 @@ MIDDLEWARE = [
     # django debug toolbar 미들웨어 추가
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
-
+# CSRF_COOKIE_DOMAIN = '127.0.0.1'
 ROOT_URLCONF = 'askcompany.urls'
 
 TEMPLATES = [

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{% static "bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css" %}" />
   <script src="{% static "jquery-3.5.1.min.js" %}" /></script>
   <script src="{% static "bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js" %}" /></script> 
+  <script src="{% static "jquery.form.min.js" %}: /></script>
 </head>
 <body>
 {% if message %}
@@ -22,7 +23,7 @@
       <div class="row">
         <div class="col-sm-12">
           <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white shadow-sm">
-            <p class="h5 my-0 me-md-auto fw-normal"><img alt="Instagram" class="s4Iyt" src="/static/instagram.png"
+            <p class="h5 my-0 me-md-auto fw-normal"><a href="{% url 'root' %}"></a><img alt="Instagram" class="s4Iyt" src="/static/instagram.png"
               srcset="/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png 2x"></p>
             <nav class="my-2 my-md-0 me-md-3">
               <a class="p-2 text-dark" href="/explore/"><svg aria-label="사람 찾기" class="_8-yf5 " fill="#262626" height="22"
@@ -38,8 +39,8 @@
                   </path>
                 </svg>
               </a>
-              <a class="p-2 text-dark" href="#">
-                <img src="{% url 'pydenticon_image' user.username %}" style= "width: 24px; height: 24px;">  
+              <a class="p-2 text-dark" href="profile_edit">
+                <img src="{{ user.avatar_url }}" class="rounded-cirlce" style= "width: 24px; height: 24px;">  
               </a>       
             </nav>
           </header>
